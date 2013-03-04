@@ -1,16 +1,12 @@
 <?php
 
 /**
- * Include the DatabaseConnection file
- */ 
-require("DatabaseConnection.php");
-
-class UserMaker
+ * User 
+ */
+require("User.php");
+class UserMaker extends User
 {
-    /**
-     * DatabaseConnection object 
-     */ 
-    public $database;
+
  
     /**
      * Default constructor
@@ -18,7 +14,7 @@ class UserMaker
      */
     function __construct(&$databaseObject)
     {
-        $this->database = $databaseObject;
+    	parent::__construct($databaseObject);
     }
     
     /**
